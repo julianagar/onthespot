@@ -23,11 +23,11 @@ robot.settings(250, 250, 360, 720
 @test_decorator
 def main():
 
-    d.straight(1000)
+    d.straight(1065)
 
-    d.run.target(1000, 10)
+    d.run_until_stalled(1000)
 
-    d.straight(-1000)
+    d.straight(-1065)
 
 if __name__ == "__main__":
         
