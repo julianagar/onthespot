@@ -22,8 +22,14 @@ robot.settings(250, 250, 360, 720)
 @test_decorator
 def main():
 
-    d.run_until_stalled(1000)
-
-    if touchSensor.pressed():
+    while (!touchSensor.pressed()):
 
         d.drive(1000)
+
+    d.run_until_stalled(1000)
+
+    d.drive(-1000)
+
+if __name__ == "__main__":
+
+    main()
