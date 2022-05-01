@@ -22,6 +22,8 @@ robot.settings(250, 250, 360, 720)
 @test_decorator
 def main():
 
+    d.run_until_stalled(1000)
+
     while (!touchSensor.pressed()):
 
         d.drive(1000)
