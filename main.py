@@ -24,7 +24,7 @@ def main():
 
     d.run_until_stalled(1000)
 
-    while (!touchSensor.pressed()):
+    while touchSensor.pressed() is False:
 
         d.drive(1000)
 
